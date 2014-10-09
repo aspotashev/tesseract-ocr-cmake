@@ -1,3 +1,5 @@
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
 
 ########### next target ###############
 
@@ -15,7 +17,7 @@ SET(tesseract_cutil_STAT_SRCS
    structures.cpp
 )
 
-add_library(tesseract_cutil STATIC ${tesseract_cutil_STAT_SRCS})
+add_library(tesseract_cutil_static STATIC ${tesseract_cutil_STAT_SRCS})
 
 
 ########### next target ###############

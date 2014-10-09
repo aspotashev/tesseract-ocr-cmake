@@ -1,3 +1,11 @@
+project(tesseract-ocr)
+cmake_minimum_required(VERSION 2.8)
+
+include_directories(/home/aspotashev/soft-git/leptonica-1.71/install/include/leptonica)
+
+add_definitions(-DUSE_STD_NAMESPACE)
+add_definitions(-fPIC)
+
 add_subdirectory(ccutil)
 add_subdirectory(viewer)
 add_subdirectory(cutil)
@@ -17,7 +25,7 @@ add_subdirectory(doc)
 
 ########### install files ###############
 
-install(FILES  tesseract.pc DESTINATION )
+# install(FILES  tesseract.pc DESTINATION )
 
 
 

@@ -1,3 +1,15 @@
+include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
+include_directories(${CMAKE_SOURCE_DIR}/classify)
+include_directories(${CMAKE_SOURCE_DIR}/dict)
+include_directories(${CMAKE_SOURCE_DIR}/wordrec)
+include_directories(${CMAKE_SOURCE_DIR}/cutil)
+include_directories(${CMAKE_SOURCE_DIR}/neural_networks/runtime)
+include_directories(${CMAKE_SOURCE_DIR}/cube)
+include_directories(${CMAKE_SOURCE_DIR}/textord)
+include_directories(${CMAKE_SOURCE_DIR}/opencl)
+include_directories(${CMAKE_SOURCE_DIR}/ccmain)
 
 ########### next target ###############
 
@@ -36,7 +48,7 @@ SET(tesseract_main_STAT_SRCS
    werdit.cpp
 )
 
-add_library(tesseract_main STATIC ${tesseract_main_STAT_SRCS})
+add_library(tesseract_main_static STATIC ${tesseract_main_STAT_SRCS})
 
 
 ########### next target ###############

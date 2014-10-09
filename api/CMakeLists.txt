@@ -1,3 +1,14 @@
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
+include_directories(${CMAKE_SOURCE_DIR}/cube)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
+include_directories(${CMAKE_SOURCE_DIR}/textord)
+include_directories(${CMAKE_SOURCE_DIR}/dict)
+include_directories(${CMAKE_SOURCE_DIR}/classify)
+include_directories(${CMAKE_SOURCE_DIR}/ccmain)
+include_directories(${CMAKE_SOURCE_DIR}/wordrec)
+include_directories(${CMAKE_SOURCE_DIR}/cutil)
+include_directories(${CMAKE_SOURCE_DIR}/opencl)
 
 ########### next target ###############
 
@@ -17,8 +28,8 @@ SET(tesseract_api_STAT_SRCS
 #     -I$(top_srcdir)/wordrec -I$(top_srcdir)/cutil \
 #     -I$(top_srcdir)/opencl
 
-add_library(tesseract_api STATIC ${tesseract_api_STAT_SRCS})
-target_link_libraries(tesseract_api
+add_library(tesseract_api_static STATIC ${tesseract_api_STAT_SRCS})
+target_link_libraries(tesseract_api_static
     tesseract_main
 #     ../cube/libtesseract_cube.la \
 #     ../neural_networks/runtime/libtesseract_neural.la \
@@ -35,15 +46,15 @@ target_link_libraries(tesseract_api
 
 ########### next target ###############
 
-SET(tesseract_SRCS
-   tesseractmain.cpp
-)
-
-add_executable(tesseract ${tesseract_SRCS})
-
-target_link_libraries(tesseract tesseract)
-
-install(TARGETS tesseract DESTINATION bin)
+# SET(tesseract_SRCS
+#    tesseractmain.cpp
+# )
+#
+# add_executable(tesseract ${tesseract_SRCS})
+#
+# target_link_libraries(tesseract tesseract)
+#
+# install(TARGETS tesseract DESTINATION bin)
 
 
 ########### install files ###############

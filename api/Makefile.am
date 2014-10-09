@@ -44,10 +44,10 @@ libtesseract_api_la_SOURCES = baseapi.cpp capi.cpp pdfrenderer.cpp renderer.cpp
 
 lib_LTLIBRARIES += libtesseract.la
 libtesseract_la_LDFLAGS = 
-libtesseract_la_SOURCES =
+libtesseract_la_SOURCES = dummy.cxx
 # Dummy C++ source to cause C++ linking.
 # see http://www.gnu.org/s/hello/manual/automake/Libtool-Convenience-Libraries.html#Libtool-Convenience-Libraries
-nodist_EXTRA_libtesseract_la_SOURCES = dummy.cxx
+# nodist_EXTRA_libtesseract_la_SOURCES = dummy.cxx
 libtesseract_la_LIBADD = \
     libtesseract_api.la \
     ../ccmain/libtesseract_main.la \

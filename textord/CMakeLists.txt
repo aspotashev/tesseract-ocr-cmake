@@ -1,3 +1,8 @@
+include_directories(${CMAKE_SOURCE_DIR}/cutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
+include_directories(${CMAKE_SOURCE_DIR}/opencl)
 
 ########### next target ###############
 
@@ -45,7 +50,7 @@ SET(tesseract_textord_STAT_SRCS
    workingpartset.cpp
 )
 
-add_library(tesseract_textord STATIC ${tesseract_textord_STAT_SRCS})
+add_library(tesseract_textord_static STATIC ${tesseract_textord_STAT_SRCS})
 
 
 ########### next target ###############

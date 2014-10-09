@@ -8,7 +8,7 @@ SET(tesseract_neural_STAT_SRCS
    sigmoid_table.cpp
 )
 
-add_library(tesseract_neural STATIC ${tesseract_neural_STAT_SRCS})
+add_library(tesseract_neural_static STATIC ${tesseract_neural_STAT_SRCS})
 
 
 ########### next target ###############

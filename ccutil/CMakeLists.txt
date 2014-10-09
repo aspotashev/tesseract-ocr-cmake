@@ -28,7 +28,7 @@ SET(tesseract_ccutil_STAT_SRCS
    universalambigs.cpp
 )
 
-add_library(tesseract_ccutil STATIC ${tesseract_ccutil_STAT_SRCS})
+add_library(tesseract_ccutil_static STATIC ${tesseract_ccutil_STAT_SRCS})
 
 
 ########### next target ###############

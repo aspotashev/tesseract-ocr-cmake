@@ -1,3 +1,8 @@
+include_directories(${CMAKE_SOURCE_DIR}/cutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
+include_directories(${CMAKE_SOURCE_DIR}/dict)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
 
 ########### next target ###############
 
@@ -43,7 +48,7 @@ SET(tesseract_classify_STAT_SRCS
    xform2d.cpp
 )
 
-add_library(tesseract_classify STATIC ${tesseract_classify_STAT_SRCS})
+add_library(tesseract_classify_static STATIC ${tesseract_classify_STAT_SRCS})
 
 
 ########### next target ###############

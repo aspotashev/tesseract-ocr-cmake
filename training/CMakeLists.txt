@@ -14,7 +14,7 @@ SET(tesseract_training_STAT_SRCS
    tlog.cpp
 )
 
-add_library(tesseract_training STATIC ${tesseract_training_STAT_SRCS})
+add_library(tesseract_training_static STATIC ${tesseract_training_STAT_SRCS})
 
 
 ########### next target ###############
@@ -23,7 +23,7 @@ SET(tesseract_tessopt_STAT_SRCS
    tessopt.cpp
 )
 
-add_library(tesseract_tessopt STATIC ${tesseract_tessopt_STAT_SRCS})
+add_library(tesseract_tessopt_static STATIC ${tesseract_tessopt_STAT_SRCS})
 
 
 ########### next target ###############
@@ -34,7 +34,7 @@ SET(ambiguous_words_SRCS
 
 add_executable(ambiguous_words ${ambiguous_words_SRCS})
 
-target_link_libraries(ambiguous_words tesseract_training tesseract_tessopt)
+target_link_libraries(ambiguous_words tesseract_training_static tesseract_tessopt_static)
 
 install(TARGETS ambiguous_words DESTINATION bin)
 
@@ -47,7 +47,7 @@ SET(classifier_tester_SRCS
 
 add_executable(classifier_tester ${classifier_tester_SRCS})
 
-target_link_libraries(classifier_tester tesseract_training tesseract_tessopt)
+target_link_libraries(classifier_tester tesseract_training_static tesseract_tessopt_static)
 
 install(TARGETS classifier_tester DESTINATION bin)
 
@@ -60,7 +60,7 @@ SET(cntraining_SRCS
 
 add_executable(cntraining ${cntraining_SRCS})
 
-target_link_libraries(cntraining tesseract_training tesseract_tessopt)
+target_link_libraries(cntraining tesseract_training_static tesseract_tessopt_static)
 
 install(TARGETS cntraining DESTINATION bin)
 

@@ -1,3 +1,9 @@
+include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/cutil)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
+include_directories(${CMAKE_SOURCE_DIR}/classify)
+include_directories(${CMAKE_SOURCE_DIR}/dict)
 
 ########### next target ###############
 
@@ -25,7 +31,7 @@ SET(tesseract_wordrec_STAT_SRCS
    wordrec.cpp
 )
 
-add_library(tesseract_wordrec STATIC ${tesseract_wordrec_STAT_SRCS})
+add_library(tesseract_wordrec_static STATIC ${tesseract_wordrec_STAT_SRCS})
 
 
 ########### next target ###############

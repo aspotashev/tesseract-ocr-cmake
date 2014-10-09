@@ -1,3 +1,4 @@
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
 
 ########### next target ###############
 
@@ -8,7 +9,7 @@ SET(tesseract_viewer_STAT_SRCS
    svpaint.cpp
 )
 
-add_library(tesseract_viewer STATIC ${tesseract_viewer_STAT_SRCS})
+add_library(tesseract_viewer_static STATIC ${tesseract_viewer_STAT_SRCS})
 
 
 ########### next target ###############

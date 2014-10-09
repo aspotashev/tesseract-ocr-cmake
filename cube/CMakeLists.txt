@@ -1,3 +1,14 @@
+include_directories(${CMAKE_SOURCE_DIR}/cutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccutil)
+include_directories(${CMAKE_SOURCE_DIR}/ccmain)
+include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
+include_directories(${CMAKE_SOURCE_DIR}/viewer)
+include_directories(${CMAKE_SOURCE_DIR}/textord)
+include_directories(${CMAKE_SOURCE_DIR}/wordrec)
+include_directories(${CMAKE_SOURCE_DIR}/classify)
+include_directories(${CMAKE_SOURCE_DIR}/dict)
+include_directories(${CMAKE_SOURCE_DIR}/neural_networks/runtime)
+include_directories(${CMAKE_SOURCE_DIR}/cube)
 
 ########### next target ###############
 
@@ -35,7 +46,7 @@ SET(tesseract_cube_STAT_SRCS
    word_unigrams.cpp
 )
 
-add_library(tesseract_cube STATIC ${tesseract_cube_STAT_SRCS})
+add_library(tesseract_cube_static STATIC ${tesseract_cube_STAT_SRCS})
 
 
 ########### next target ###############
