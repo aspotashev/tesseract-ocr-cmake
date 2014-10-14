@@ -67,8 +67,12 @@ install(TARGETS tesseract_ccstruct_static DESTINATION lib)
 
 ########### install files ###############
 
-install(FILES  publictypes.h DESTINATION include)
-
+install(
+    FILES
+        publictypes.h
+    DESTINATION
+        include/tesseract
+)
 
 
 #original Makefile.am contents follow:

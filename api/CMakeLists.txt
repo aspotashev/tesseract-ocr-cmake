@@ -61,8 +61,12 @@ install(TARGETS tesseract_api_static DESTINATION lib)
 
 ########### install files ###############
 
-install(FILES  apitypes.h baseapi.h capi.h renderer.h DESTINATION include)
-
+install(
+    FILES
+        apitypes.h baseapi.h capi.h renderer.h
+    DESTINATION
+        include/tesseract
+)
 
 
 #original Makefile.am contents follow:

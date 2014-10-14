@@ -49,7 +49,28 @@ install(TARGETS tesseract_ccutil_static DESTINATION lib)
 
 ########### install files ###############
 
-install(FILES  basedir.h errcode.h fileerr.h genericvector.h helpers.h host.h memry.h  	ndminx.h params.h ocrclass.h platform.h serialis.h strngs.h  	tesscallback.h unichar.h unicharmap.h unicharset.h DESTINATION include)
+install(
+    FILES
+        basedir.h
+        errcode.h
+        fileerr.h
+        genericvector.h
+        helpers.h
+        host.h
+        memry.h
+        ndminx.h
+        params.h
+        ocrclass.h
+        platform.h
+        serialis.h
+        strngs.h
+        tesscallback.h
+        unichar.h
+        unicharmap.h
+        unicharset.h
+    DESTINATION
+        include/tesseract
+)
 
 
 

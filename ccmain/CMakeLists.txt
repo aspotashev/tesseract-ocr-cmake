@@ -69,9 +69,16 @@ install(TARGETS tesseract_main_static DESTINATION lib)
 
 ########### install files ###############
 
-install(FILES  thresholder.h ltrresultiterator.h pageiterator.h resultiterator.h  	osdetect.h  DESTINATION include)
-
-
+install(
+    FILES
+        thresholder.h
+        ltrresultiterator.h
+        pageiterator.h
+        resultiterator.h
+        osdetect.h
+    DESTINATION
+        include/tesseract
+)
 
 #original Makefile.am contents follow:
 
