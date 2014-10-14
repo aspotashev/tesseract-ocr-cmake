@@ -26,6 +26,48 @@ add_subdirectory(tessdata)
 add_subdirectory(doc)
 
 
+####### Build merged static lib #######
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules")
+include(MergeStaticLibraries)
+
+add_library(tesseract_static STATIC "${DUMMY_CPP}")
+target_link_libraries(tesseract_static ${STATIC_LIB_LINK}
+    $<TARGET_FILE:tesseract_api_static>
+    $<TARGET_FILE:tesseract_main_static>
+    $<TARGET_FILE:tesseract_cube_static>
+    $<TARGET_FILE:tesseract_neural_static>
+    $<TARGET_FILE:tesseract_textord_static>
+    $<TARGET_FILE:tesseract_wordrec_static>
+    $<TARGET_FILE:tesseract_classify_static>
+    $<TARGET_FILE:tesseract_dict_static>
+    $<TARGET_FILE:tesseract_ccstruct_static>
+    $<TARGET_FILE:tesseract_cutil_static>
+    $<TARGET_FILE:tesseract_viewer_static>
+    $<TARGET_FILE:tesseract_ccutil_static>
+    $<TARGET_FILE:tesseract_opencl_static>
+    ${LEPTONICA_LIBRARIES}
+)
+
+set(CMAKE_BUILD_TYPE release)
+MERGE_STATIC_LIBRARIES (tesseract_static ALL
+    "
+        ${CMAKE_BINARY_DIR}/api/libtesseract_api_static.a
+        ${CMAKE_BINARY_DIR}/neural_networks/runtime/libtesseract_neural_static.a
+        ${CMAKE_BINARY_DIR}/textord/libtesseract_textord_static.a
+        ${CMAKE_BINARY_DIR}/wordrec/libtesseract_wordrec_static.a
+        ${CMAKE_BINARY_DIR}/classify/libtesseract_classify_static.a
+        ${CMAKE_BINARY_DIR}/dict/libtesseract_dict_static.a
+        ${CMAKE_BINARY_DIR}/ccstruct/libtesseract_ccstruct_static.a
+        ${CMAKE_BINARY_DIR}/cutil/libtesseract_cutil_static.a
+        ${CMAKE_BINARY_DIR}/viewer/libtesseract_viewer_static.a
+        ${CMAKE_BINARY_DIR}/ccutil/libtesseract_ccutil_static.a
+        ${CMAKE_BINARY_DIR}/opencl/libtesseract_opencl_static.a
+        /home/aspotashev/soft-git/leptonica-1.71/install/lib/liblept.a
+    "
+)
+install(TARGETS tesseract_static DESTINATION lib)
+
 ########### install files ###############
 
 # install(FILES  tesseract.pc DESTINATION )
