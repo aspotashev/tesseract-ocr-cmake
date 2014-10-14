@@ -54,13 +54,13 @@ foreach (LIB ${TESSERACT_LIBRARIES})
     get_target_property(LIB_FILE ${LIB} LOCATION)
     target_link_libraries(tesseract_static ${STATIC_LIB_LINK} ${LIB_FILE})
 
-    set(TESSERACT_LIBRARIES_PATHS "${TESSERACT_LIBRARIES_PATHS} ${LIB_FILE}")
+    set(TESSERACT_LIBRARIES_PATHS "${TESSERACT_LIBRARIES_PATHS};${LIB_FILE}")
 endforeach()
 target_link_libraries(tesseract_static ${STATIC_LIB_LINK} ${LEPTONICA_LIBRARIES})
 
 set(CMAKE_BUILD_TYPE release)
 MERGE_STATIC_LIBRARIES (tesseract_static ALL
-    "${TESSERACT_LIBRARIES_PATHS} ${LEPTONICA_LIBRARIES}"
+    "${LEPTONICA_LIBRARIES}${TESSERACT_LIBRARIES_PATHS}"
 )
 install(TARGETS tesseract_static DESTINATION lib)
 
