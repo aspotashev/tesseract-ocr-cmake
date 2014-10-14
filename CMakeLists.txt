@@ -1,7 +1,7 @@
 project(tesseract-ocr)
 cmake_minimum_required(VERSION 2.8)
 
-include_directories(/home/aspotashev/soft-git/leptonica-1.71/install/include/leptonica)
+include_directories(${LEPTONICA_INCLUDE_DIRS})
 
 add_definitions(-DUSE_STD_NAMESPACE)
 add_definitions(-fPIC)
