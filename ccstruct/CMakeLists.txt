@@ -62,6 +62,7 @@ target_link_libraries(tesseract_ccstruct)
 
 set_target_properties(tesseract_ccstruct PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_ccstruct DESTINATION lib)
+install(TARGETS tesseract_ccstruct_static DESTINATION lib)
 
 
 ########### install files ###############

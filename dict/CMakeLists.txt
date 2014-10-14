@@ -32,6 +32,7 @@ target_link_libraries(tesseract_dict)
 
 set_target_properties(tesseract_dict PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_dict DESTINATION lib)
+install(TARGETS tesseract_dict_static DESTINATION lib)
 
 
 ########### install files ###############

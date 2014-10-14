@@ -64,6 +64,7 @@ target_link_libraries(tesseract_main)
 
 set_target_properties(tesseract_main PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_main DESTINATION lib)
+install(TARGETS tesseract_main_static DESTINATION lib)
 
 
 ########### install files ###############

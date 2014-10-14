@@ -44,6 +44,8 @@ target_link_libraries(tesseract_api_static
 #     ../opencl/libtesseract_opencl.la
   )
 
+install(TARGETS tesseract_api_static DESTINATION lib)
+
 ########### next target ###############
 
 # SET(tesseract_SRCS

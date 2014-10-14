@@ -47,6 +47,7 @@ target_link_libraries(tesseract_wordrec)
 
 set_target_properties(tesseract_wordrec PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_wordrec DESTINATION lib)
+install(TARGETS tesseract_wordrec_static DESTINATION lib)
 
 
 ########### install files ###############

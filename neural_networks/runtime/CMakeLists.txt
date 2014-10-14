@@ -24,6 +24,7 @@ target_link_libraries(tesseract_neural)
 
 set_target_properties(tesseract_neural PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_neural DESTINATION lib)
+install(TARGETS tesseract_neural_static DESTINATION lib)
 
 
 ########### install files ###############

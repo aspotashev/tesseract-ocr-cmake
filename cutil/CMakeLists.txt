@@ -33,6 +33,7 @@ target_link_libraries(tesseract_cutil)
 
 set_target_properties(tesseract_cutil PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_cutil DESTINATION lib)
+install(TARGETS tesseract_cutil_static DESTINATION lib)
 
 
 ########### install files ###############

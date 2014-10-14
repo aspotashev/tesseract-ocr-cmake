@@ -24,6 +24,7 @@ target_link_libraries(tesseract_opencl)
 
 set_target_properties(tesseract_opencl PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_opencl DESTINATION lib)
+install(TARGETS tesseract_opencl_static DESTINATION lib)
 
 
 ########### install files ###############

@@ -44,6 +44,7 @@ target_link_libraries(tesseract_ccutil)
 
 set_target_properties(tesseract_ccutil PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_ccutil DESTINATION lib)
+install(TARGETS tesseract_ccutil_static DESTINATION lib)
 
 
 ########### install files ###############

@@ -66,6 +66,7 @@ target_link_libraries(tesseract_textord)
 
 set_target_properties(tesseract_textord PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_textord DESTINATION lib)
+install(TARGETS tesseract_textord_static DESTINATION lib)
 
 
 ########### install files ###############

@@ -37,6 +37,7 @@ add_executable(ambiguous_words ${ambiguous_words_SRCS})
 target_link_libraries(ambiguous_words tesseract_training_static tesseract_tessopt_static)
 
 install(TARGETS ambiguous_words DESTINATION bin)
+install(TARGETS ambiguous_words_static DESTINATION bin)
 
 
 ########### next target ###############

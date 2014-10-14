@@ -64,6 +64,7 @@ target_link_libraries(tesseract_classify)
 
 set_target_properties(tesseract_classify PROPERTIES VERSION 4.2.0 SOVERSION 4)
 install(TARGETS tesseract_classify DESTINATION lib)
+install(TARGETS tesseract_classify_static DESTINATION lib)
 
 
 ########### install files ###############
