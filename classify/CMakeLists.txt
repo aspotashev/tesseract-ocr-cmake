@@ -3,6 +3,7 @@ include_directories(${CMAKE_SOURCE_DIR}/ccutil)
 include_directories(${CMAKE_SOURCE_DIR}/ccstruct)
 include_directories(${CMAKE_SOURCE_DIR}/dict)
 include_directories(${CMAKE_SOURCE_DIR}/viewer)
+include_directories(${CMAKE_SOURCE_DIR}/msvsport)
 
 ########### next target ###############
 

@@ -10,6 +10,7 @@ include_directories(${CMAKE_SOURCE_DIR}/cube)
 include_directories(${CMAKE_SOURCE_DIR}/textord)
 include_directories(${CMAKE_SOURCE_DIR}/opencl)
 include_directories(${CMAKE_SOURCE_DIR}/ccmain)
+include_directories(${CMAKE_SOURCE_DIR}/msvsport)
 
 ########### next target ###############
 

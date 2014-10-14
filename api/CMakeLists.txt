@@ -9,6 +9,7 @@ include_directories(${CMAKE_SOURCE_DIR}/ccmain)
 include_directories(${CMAKE_SOURCE_DIR}/wordrec)
 include_directories(${CMAKE_SOURCE_DIR}/cutil)
 include_directories(${CMAKE_SOURCE_DIR}/opencl)
+include_directories(${CMAKE_SOURCE_DIR}/msvsport)
 
 ########### next target ###############
 
