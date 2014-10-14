@@ -9,6 +9,7 @@ include_directories(${CMAKE_SOURCE_DIR}/classify)
 include_directories(${CMAKE_SOURCE_DIR}/dict)
 include_directories(${CMAKE_SOURCE_DIR}/neural_networks/runtime)
 include_directories(${CMAKE_SOURCE_DIR}/cube)
+include_directories(${CMAKE_SOURCE_DIR}/msvsport)
 
 ########### next target ###############
 
