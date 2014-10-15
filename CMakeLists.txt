@@ -32,7 +32,12 @@ add_subdirectory(doc)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules")
 include(MergeStaticLibraries)
 
-add_library(tesseract_static STATIC "${DUMMY_CPP}")
+list(APPEND TESSERACT_LIBRARY_SRCS "${DUMMY_CPP}")
+if (WIN32)
+    list(APPEND TESSERACT_LIBRARY_SRCS msvsport/gettimeofday.cpp)
+endif()
+
+add_library(tesseract_static STATIC ${TESSERACT_LIBRARY_SRCS})
 
 list(APPEND TESSERACT_LIBRARIES
     tesseract_api_static
