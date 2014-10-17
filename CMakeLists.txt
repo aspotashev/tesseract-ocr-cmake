@@ -77,6 +77,10 @@ foreach (LIB ${TESSERACT_LIBRARIES})
     set(TESSERACT_LIBRARIES_PATHS "${TESSERACT_LIBRARIES_PATHS};${LIB_FILE}")
 endforeach()
 target_link_libraries(tesseract_static ${STATIC_LIB_LINK} ${LEPTONICA_LIBRARIES})
+if(WIN32)
+    target_link_libraries(tesseract_static ws2_32.lib)
+endif()
+
 add_dependencies(tesseract_static ${TESSERACT_LIBRARIES})
 
 set(CMAKE_BUILD_TYPE release)
